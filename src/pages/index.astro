@@ -1,0 +1,42 @@
+---
+import Github from '../components/icons/Github.astro';
+import SocialBadge from '../components/SocialBadge.astro';
+import Layout from '../layouts/Layout.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Mail from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import WorkExperience from '../components/icons/WorkExperience.astro';
+---
+
+<Layout>
+	<SectionContainer id="home" class="pt-44 pb-22">
+		<h1 class="text-white text-5xl font-bold pb-4">Irving Poot</h1>
+		<h2 class="text-2xl opacity-80 text-wrap">Software Developer</h2>
+
+		<nav class="flex gap-x-2 mt-4">
+			<SocialBadge href="https://github.com/irvingpoot">
+				<Github class="size-6" />
+				GitHub
+			</SocialBadge>
+			
+			<SocialBadge href="https://linkedin.com/in/irvingpoot">
+				<Linkedin class="size-6" />
+				LinkedIn
+			</SocialBadge>
+
+			<SocialBadge href="https://linkedin.com/in/irvingpoot">
+				<Mail class="size-6" />
+				eduardopoot17@gmail.com
+			</SocialBadge>
+		</nav>
+	</SectionContainer>
+
+	<SectionContainer id="experience">
+		<h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
+			<WorkExperience class="size-6" />
+			Work Experience
+		</h2>
+		<Experience />
+	</SectionContainer>
+</Layout>
