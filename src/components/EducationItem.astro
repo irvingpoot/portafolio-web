@@ -1,0 +1,21 @@
+---
+import MortarBoardIcon from './icons/MortarBoardIcon.astro';
+
+interface Props {
+    date: string;
+    institution: string;
+    title: string;
+}
+
+const { title, date, institution } = Astro.props;
+
+---
+
+<span class="absolute flex items-center justify-center w-6 h-6 bg-brand-softer rounded-full -inset-s-3 ring-3 ring-buffer">
+    <MortarBoardIcon class="size-5 text-mine" />
+</span>
+
+
+<time class="border border-mine-light text-mine-light text-xs font-medium px-1.5 py-0.5 rounded">{date}</time>
+<h3 class="flex items-center mb-1 text-lg font-semibold text-mine my-2">{institution}</h3>
+<p class="mb-4 text-white">{title}</p>

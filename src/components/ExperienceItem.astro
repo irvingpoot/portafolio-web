@@ -3,14 +3,14 @@ interface Props {
     title: string;
     date: string;
     description: string;
-    details?: string[]; // <--- Nueva propiedad opcional (array de strings)
+    details?: string[];
     link?: string;
 }
 
 const { title, date, description, details, link } = Astro.props;
 ---
 
-<div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
+<div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -inset-s-1.5 border border-buffer"></div>
 <time class="text-sm font-normal leading-none text-mine-dark">{date}</time>
 <h3 class="text-lg font-semibold text-mine my-2">{title}</h3>
 
@@ -24,7 +24,7 @@ const { title, date, description, details, link } = Astro.props;
     <ul class="space-y-1 ml-5 mb-4">
         {details.map((item) => (
             <li class="flex items-start gap-2 text-base font-normal text-white text-pretty">
-                <span class="mt-2 w-1.5 h-1.5 bg-mine rounded-full flex-shrink-0 opacity-60"></span>
+                <span class="mt-2 w-1.5 h-1.5 bg-mine rounded-full shrink-0 opacity-60"></span>
                 <span>{item}</span>
             </li>
         ))}

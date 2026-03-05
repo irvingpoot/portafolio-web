@@ -9,11 +9,13 @@ import SectionContainer from '../components/SectionContainer.astro';
 import WorkExperience from '../components/icons/WorkExperience.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
 import Projects from '../components/Projects.astro';
+import Education from '../components/Education.astro';
+import EducationIcon from '../components/icons/EducationIcon.astro';
 ---
 
 <Layout>
 	<main class="px-2">
-		<SectionContainer id="home" class="pt-44 pb-22">
+		<SectionContainer id="about" class="pt-44 pb-22">
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10">Hey, I'm Irving!</h1>
 			<h2 class="max-w-175 text-xl lg:text-2xl opacity-80 text-pretty">
 				As a final-year <span class="text-mine">Software Engineering</span> student, I combine my academic background with a practical approach to developing modern and <span class="text-mine">scalable web applications</span>. <br>
@@ -27,7 +29,7 @@ import Projects from '../components/Projects.astro';
 					GitHub
 				</SocialBadge>
 				
-				<SocialBadge href="https://linkedin.com/in/irvingpoot">
+				<SocialBadge href="https://www.linkedin.com/in/irvingpoot/">
 					<Linkedin class="size-4 md:size-6" />
 					LinkedIn
 				</SocialBadge>
@@ -37,6 +39,14 @@ import Projects from '../components/Projects.astro';
 					eduardopoot17@gmail.com
 				</SocialBadge>
 			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="education">
+			<h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
+				<EducationIcon class="size-6" />
+				Education
+			</h2>
+			<Education />
 		</SectionContainer>
 
 		<SectionContainer id="experience">
