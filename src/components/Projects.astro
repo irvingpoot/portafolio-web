@@ -1,0 +1,72 @@
+---
+import AstroIcon from "./icons/AstroIcon.astro";
+import ClerkIcon from "./icons/ClerkIcon.astro";
+import JSIcon from "./icons/JSIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+
+const TAGS = {
+    Astro: {
+        name: 'Astro',
+        class: 'hover:bg-mine',
+        icon: AstroIcon,
+    },
+    Clerk: {
+        name: 'Clerk',
+        class: 'hover:bg-clerk/10 bg-clerk/20',
+        icon: ClerkIcon,
+    },
+    JavaScript: {
+        name: 'JavaScript',
+        class: 'bg-javascript',
+        icon: JSIcon,
+    },
+    TypeScript: {
+        name: 'TypeScript',
+        class: 'bg-typescript',
+        icon: TypeScriptIcon,
+    },
+    TailwindCSS: {
+        name: 'Tailwind CSS',
+        class: 'bg-tailwind',
+        icon: TailwindIcon,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: 'Lab-Somno - A all-in-one solution for Laboratorio del Sueño y Neurociencias - UADY',
+        description: 'Designed and developed a comprehensive web platform for the Sleep and Neuroscience Laboratory at UADY, specifically architected to meet complex clinical requirements under strict budgetary constraints. Beyond standardizing patient records and appointments, I engineered a specialized diagnostic module that automates the scoring of sleep quality scales. This transition from paper-based methods to a secure, digital ecosystem streamlined the clinical workflow, ensuring data accuracy and significantly improving the diagnostic process for healthcare professionals.',
+        link: 'https://pacientes-lab.vercel.app/',
+        github: 'https://github.com/irvingpoot/RegistroLab',
+        image: '/projects/lab-somno.webp',
+        tags: [TAGS.Astro, TAGS.Clerk, TAGS.TypeScript, TAGS.JavaScript, TAGS.TailwindCSS],
+    },
+    {
+        title: 'Redes de Neurociencias - Educational Platform & Digital Identity',
+        description: "Designed and developed the official platform for 'Redes de Neurociencias', an association dedicated to neuroscience education and professional networking. I led the project from conceptual UI/UX design to a high-performance implementation using Astro and Tailwind CSS. The site features a centralized course catalog and specialized resources for healthcare professionals, focused on delivering a seamless, responsive, and SEO-optimized experience. The platform is currently in active development, with a roadmap focused on expanding its interactive modules and community features.",
+        link: 'https://www.redesdeneurociencias.com/',
+        github: 'https://github.com/irvingpoot/RdN',
+        image: '/projects/rdn.webp',
+        tags: [TAGS.Astro, TAGS.TypeScript, TAGS.JavaScript, TAGS.TailwindCSS],
+    },
+];
+---
+
+{PROJECTS.map(({title, description, tags, image}) => (
+    <article class="mb-10">
+        <h3 class="text-2xl text-mine font-semibold mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex flex-row gap-x-4 mb-2">
+            {tags.map(tag => (
+                <li> 
+                    <span class={`flex gap-x-2 rounded-full text-xs py-2 px-3 border border-mine hover:bg-mine ${tag.class}`}>
+                        <tag.icon class="size-4"/>
+                        {tag.name}
+                    </span>
+                </li>
+            ))}
+        </ul>
+        <img class="rounded shadow-2xl shadow-white/10" src={image} alt={title} />
+    </article>
+))}

@@ -7,36 +7,52 @@ import Mail from '../components/icons/Mail.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import WorkExperience from '../components/icons/WorkExperience.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout>
-	<SectionContainer id="home" class="pt-44 pb-22">
-		<h1 class="text-white text-5xl font-bold pb-4">Irving Poot</h1>
-		<h2 class="text-2xl opacity-80 text-wrap">Software Developer</h2>
+	<main class="px-2">
+		<SectionContainer id="home" class="pt-44 pb-22">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10">Hey, I'm Irving!</h1>
+			<h2 class="max-w-175 text-xl lg:text-2xl opacity-80 text-pretty">
+				As a final-year <span class="text-mine">Software Engineering</span> student, I combine my academic background with a practical approach to developing modern and <span class="text-mine">scalable web applications</span>. <br>
+				I have experience building real-world solutions for sectors such as <span class="text-mine">healthcare and education</span>, always prioritizing efficient architectures and secure data management. <br>
+				My interest in diverse fields brings a <span class="text-mine">multidisciplinary perspective</span> to every challenge, allowing me to tackle complex problems with a holistic vision, adapting technology to the specific needs of each project.
+			</h2>
 
-		<nav class="flex gap-x-2 mt-4">
-			<SocialBadge href="https://github.com/irvingpoot">
-				<Github class="size-6" />
-				GitHub
-			</SocialBadge>
-			
-			<SocialBadge href="https://linkedin.com/in/irvingpoot">
-				<Linkedin class="size-6" />
-				LinkedIn
-			</SocialBadge>
+			<nav class="flex gap-4 mt-8">
+				<SocialBadge href="https://github.com/irvingpoot">
+					<Github class="size-4 md:size-6" />
+					GitHub
+				</SocialBadge>
+				
+				<SocialBadge href="https://linkedin.com/in/irvingpoot">
+					<Linkedin class="size-4 md:size-6" />
+					LinkedIn
+				</SocialBadge>
 
-			<SocialBadge href="https://linkedin.com/in/irvingpoot">
-				<Mail class="size-6" />
-				eduardopoot17@gmail.com
-			</SocialBadge>
-		</nav>
-	</SectionContainer>
+				<SocialBadge href="mailto:eduardopoot17@gmail.com">
+					<Mail class="size-4 md:size-6" />
+					eduardopoot17@gmail.com
+				</SocialBadge>
+			</nav>
+		</SectionContainer>
 
-	<SectionContainer id="experience">
-		<h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
-			<WorkExperience class="size-6" />
-			Work Experience
-		</h2>
-		<Experience />
-	</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
+				<WorkExperience class="size-6" />
+				Work Experience
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
+				<CodeIcon class="size-6" />
+				Projects
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
 </Layout>

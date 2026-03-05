@@ -3,3 +3,11 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
+
+
+@theme {
+    --color-mine: #8875ff;
+    --color-mine-dark: #c5b7ee;
+    --color-mine-light: #f6ebff;
+    
+}
