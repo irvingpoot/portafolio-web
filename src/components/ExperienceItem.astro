@@ -11,11 +11,11 @@ const { title, date, description, details, link } = Astro.props;
 ---
 
 <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -inset-s-1.5 border border-buffer"></div>
-<time class="text-sm font-normal leading-none text-mine-dark">{date}</time>
-<h3 class="text-lg font-semibold text-mine my-2">{title}</h3>
+<time class="text-sm font-normal leading-none text-mine-dark timeline-view animate-fade-in-up animate-range-[entry_5%_contain_20%]">{date}</time>
+<h3 class="text-lg font-semibold text-mine my-2 timeline-view animate-fade-in-up animate-range-[entry_5%_contain_20%]">{title}</h3>
 
 {description && (
-    <p class="mb-4 text-base font-normal text-white text-pretty">
+    <p class="mb-4 text-base font-normal text-white text-pretty timeline-view animate-fade-in-up animate-range-[entry_5%_contain_20%]">
         {description}
     </p>
 )}
@@ -23,7 +23,7 @@ const { title, date, description, details, link } = Astro.props;
 {details && (
     <ul class="space-y-1 ml-5 mb-4">
         {details.map((item) => (
-            <li class="flex items-start gap-2 text-base font-normal text-white text-pretty">
+            <li class="flex items-start gap-2 text-base font-normal text-white text-pretty timeline-view animate-fade-in-up animate-range-[entry_5%_contain_20%]">
                 <span class="mt-2 w-1.5 h-1.5 bg-mine rounded-full shrink-0 opacity-60"></span>
                 <span>{item}</span>
             </li>

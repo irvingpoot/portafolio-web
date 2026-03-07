@@ -1,0 +1,31 @@
+---
+import Github from "./icons/Github.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+import SocialBadge from "./SocialBadge.astro";
+---
+
+<footer class="flex flex-col gap-7 items-center justify-center my-5">
+    <nav class="flex flex-row gap-x-20 opacity-80">
+        <a class="p-2 rounded-full hover:bg-mine" href="#about">About</a>
+        <a class="p-2 rounded-full hover:bg-mine" href="#Education">Education</a>
+        <a class="p-2 rounded-full hover:bg-mine" href="#experience">Experience</a>
+        <a class="p-2 rounded-full hover:bg-mine" href="#projects">Projects</a>
+    </nav>
+
+    <nav class="flex gap-10 opacity-80">
+		<a href="https://github.com/irvingpoot">
+            <Github class="size-5" />
+        </a>
+        <a href="">
+            <Mail class="size-5" />
+        </a>
+        <a href="https://www.linkedin.com/in/irvingpoot/">
+            <Linkedin class="size-5" />
+        </a>
+	</nav>
+
+    <h3 class="opacity-80 tracking-wide">
+        Designed and developed by <a href="https://irvingpoot.com" class="text-mine">Irving Poot</a>.
+    </h3>
+</footer>

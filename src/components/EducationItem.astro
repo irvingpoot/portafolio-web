@@ -15,7 +15,8 @@ const { title, date, institution } = Astro.props;
     <MortarBoardIcon class="size-5 text-mine" />
 </span>
 
-
-<time class="border border-mine-light text-mine-light text-xs font-medium px-1.5 py-0.5 rounded">{date}</time>
-<h3 class="flex items-center mb-1 text-lg font-semibold text-mine my-2">{institution}</h3>
-<p class="mb-4 text-white">{title}</p>
+<div class="timeline-view animate-slide-in-left animate-range-[entry_5%_contain_20%]">
+    <time class="border border-mine-light text-mine-light text-xs font-medium px-1.5 py-0.5 rounded">{date}</time>
+    <h3 class="flex items-center mb-1 text-lg font-semibold text-mine my-2">{institution}</h3>
+    <p class="mb-4 text-white">{title}</p>
+</div>
